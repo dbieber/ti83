@@ -1,0 +1,54 @@
+ClrHome
+Menu("      TYPE      ","INTEGERS,I,"PRIMES",P,"SQUARES",S
+Lbl I
+Input "NUMBER?",A
+1->B
+While A/B>=sqrt(abs(A))
+If A/B=int(A/B)
+Then
+Disp -B,-A/B,"",B,A/B
+Pause
+ClrHome
+End
+B+1->B
+End
+Stop
+Lbl P
+Input "NUMBER?",THETA
+2->A
+Lbl 0
+While A<=THETA
+2->C While sqrt(A)>=C
+If A/C=int(A/C)
+Then
+A+1->A
+Goto 0
+End
+C+1->C
+End
+If THETA/A=int(THETA/A)
+Then
+Disp A
+Pause
+THETA/A->THETA
+Else:A+1->A:End
+End
+Stop
+Lbl S
+Input "NUMBER?",A
+int(sqrt(A)+1)->B
+2->B
+A->C
+While B^2<=C
+If C/B^2=int(C/B^2)
+Then
+C/B^2->C
+Disp B,B,""
+Pause
+Else
+B+1->B
+End
+End
+If C/=1
+Disp "REMAINING FACTOR",C
+Stop

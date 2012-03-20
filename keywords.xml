@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<keywords>
+<command name="simplify"    argt="Number"         rett="Number"   format="($)"             priority="1"/>
+<command name="simplify"    argt="Matrix"         rett="Matrix"   format="($)"             priority="1"/>
+<command name="simplify"    argt="List"           rett="List"     format="($)"             priority="1"/>
+<command name="simplify"    argt="String"         rett="String"   format="($)"             priority="1"/>
+<command name="pi"          argt="Number"         rett="Number"   format="pi"              priority="1"/>
+<command name="sqrt"        argt="Number"         rett="Number"   format="sqrt($)"         priority="1"/>
+<command name="sin"         argt="Number"         rett="Number"   format="sin($)"          priority="1"/>
+<command name="cos"         argt="Number"         rett="Number"   format="cos($)"          priority="1"/>
+<command name="tan"         argt="Number"         rett="Number"   format="tan($)"          priority="1"/>
+<command name="and"         argt="Number,Number"  rett="Number"   format="$ and $"         priority="1"/>
+<command name="or"          argt="Number,Number"  rett="Number"   format="$ or $"          priority="1"/>
+<command name="xor"         argt="Number,Number"  rett="Number"   format="$ xor $"         priority="1"/>
+<command name="factorial"   argt="Number"         rett="Number"   format="$!"              priority="1"/>
+<command name="not"         argt="Number"         rett="Number"   format="not($)"          priority="1"/>
+<command name="power"       argt="Number,Number"  rett="Number"   format="$^$"             priority="1"/>
+<command name="equals"      argt="Number,Number"  rett="Number"   format="$=$"             priority="1"/>
+<command name="multNumbers" argt="Number,Number"  rett="Number"   format="$*$"             priority="1"/>
+<command name="multNumbers" argt="Number,Number"  rett="Number"   format="$$"              priority="1"/>
+<command name="divNumbers"  argt="Number,Number"  rett="Number"   format="$/$"             priority="1"/>
+<command name="addNumbers"  argt="Number,Number"  rett="Number"   format="$+$"             priority="1"/>
+<command name="subNumbers"  argt="Number,Number"  rett="Number"   format="$-$"             priority="1"/>
+<command name="negate"      argt="Number"         rett="Number"   format="-$"              priority="1"/>
+<command name="negate"      argt="Matrix"         rett="Matrix"   format="-$"              priority="1"/>
+<command name="negate"      argt="List"           rett="List"     format="-$"              priority="1"/>
+<command name="lessThan"    argt="Number,Number"  rett="Number"   format="$&lt;$"          priority="1"/>
+<command name="lessOrEqual" argt="Number,Number"  rett="Number"   format="$&lt;=$"         priority="1"/>
+<command name="moreThan"    argt="Number,Number"  rett="Number"   format="$&gt;$"          priority="1"/>
+<command name="moreOrEqual" argt="Number,Number"  rett="Number"   format="$&gt;=$"         priority="1"/>
+<command name="storeIn"     argt="Number,NumVar"  rett="Number"   format="$-&gt;$"         priority="1"/>
+<command name="storeIn"     argt="Matrix,MatVar"  rett="Number"   format="$-&gt;$"         priority="1"/>
+<command name="storeIn"     argt="List,ListVar"   rett="Number"   format="$-&gt;$"         priority="1"/>
+<command name="storeIn"     argt="String,StrVar"  rett="Number"   format="$-&gt;$"         priority="1"/>
+<command name="storeIn"     argt="Picture,PicVar" rett="Number"   format="$-&gt;$"         priority="1"/>
+<command name="label"       argt="Label"          rett="Void"     format="Lbl $"           priority="1"/>
+<command name="goto"        argt="Label"          rett="Void"     format="Goto $"          priority="1"/>
+<command name="clrHome"     argt="None"           rett="Void"     format="ClrHome"         priority="1"/>
+<command name="clrDraw"     argt="None"           rett="Void"     format="ClrDraw"         priority="1"/>
+<command name="menu"        argt="CSV"            rett="Void"     format="Menu($)"         priority="1"/>
+<command name="disp"        argt="CSV"            rett="Void"     format="Disp $"          priority="1"/>
+<command name="linreg"      argt="CSV"            rett="Void"     format="LinReg(ax+b) $"  priority="1"/>
+<command name="call"        argt="Name"           rett="Void"     format="prgm$"           priority="1"/>
+<command name="stop"        argt="None"           rett="Void"     format="Stop"            priority="1"/>
+<command name="getMatRow"   argt="CSV"            rett="MatRow"   format="[$]"             priority="1"/>
+<command name="getMatrix"   argt="MatRows"        rett="Matrix"   format="[$]"             priority="1"/>
+<command name="getListVar"  argt="Name"           rett="ListVar"  format=".$"              priority="1"/>
+<command name="if"          argt="Number"         rett="None"     format="If $"            priority="1"/>
+<command name="then"        argt="None"           rett="None"     format="Then"            priority="1"/>
+<command name="else"        argt="None"           rett="None"     format="Else"            priority="1"/>
+<command name="end"         argt="None"           rett="None"     format="End"             priority="1"/>
+<command name="intPart"     argt="Number"         rett="Number"   format="int($)"          priority="1"/>
+<command name="text"        argt="Number,Number,String" rett="None" format="Text($,$,$)"   priority="1"/>
+<command name="delvar"      argt="NumVar"         rett="None"     format="DelVar $"        priority="1"/>
+<command name="output"      argt="Number,Number,String" rett="None" format="Output($,$,$)"   priority="1"/>
+<variable name="A" type="NumVar"/>
+<variable name="B" type="NumVar"/>
+<variable name="C" type="NumVar"/>
+<variable name="D" type="NumVar"/>
+<variable name="E" type="NumVar"/>
+<variable name="F" type="NumVar"/>
+<variable name="G" type="NumVar"/>
+<variable name="H" type="NumVar"/>
+<variable name="I" type="NumVar"/>
+<variable name="J" type="NumVar"/>
+<variable name="K" type="NumVar"/>
+<variable name="L" type="NumVar"/>
+<variable name="M" type="NumVar"/>
+<variable name="N" type="NumVar"/>
+<variable name="O" type="NumVar"/>
+<variable name="P" type="NumVar"/>
+<variable name="Q" type="NumVar"/>
+<variable name="R" type="NumVar"/>
+<variable name="S" type="NumVar"/>
+<variable name="T" type="NumVar"/>
+<variable name="U" type="NumVar"/>
+<variable name="V" type="NumVar"/>
+<variable name="W" type="NumVar"/>
+<variable name="X" type="NumVar"/>
+<variable name="Y" type="NumVar"/>
+<variable name="Z" type="NumVar"/>
+<variable name="Theta" type="NumVar"/>
+<variable name="a" type="NumVar"/>
+<variable name="b" type="NumVar"/>
+<variable name="c" type="NumVar"/>
+<variable name="d" type="NumVar"/>
+<variable name="e" type="NumVar"/>
+<variable name="r" type="NumVar"/>
+<variable name="r_squared" type="NumVar"/>
+<variable name="R_squared" type="NumVar"/>
+<variable name="n" type="NumVar"/>
+<variable name="xbar" type="NumVar"/>
+<variable name="Sx" type="NumVar"/>
+<variable name="sigmax" type="NumVar"/>
+<variable name="Sigmax" type="NumVar"/>
+<variable name="Sigmaxx" type="NumVar"/>
+<variable name="ybar" type="NumVar"/>
+<variable name="Sy" type="NumVar"/>
+<variable name="sigmay" type="NumVar"/>
+<variable name="Sigmay" type="NumVar"/>
+<variable name="Sigmayy" type="NumVar"/>
+<variable name="Sigmaxy" type="NumVar"/>
+<variable name="Xmin" type="NumVar"/>
+<variable name="Xmax" type="NumVar"/>
+<variable name="Xscl" type="NumVar"/>
+<variable name="Ymin" type="NumVar"/>
+<variable name="Ymax" type="NumVar"/>
+<variable name="Yscl" type="NumVar"/>
+<variable name="Xres" type="NumVar"/>
+<variable name="minX" type="NumVar"/>
+<variable name="minY" type="NumVar"/>
+<variable name="maxX" type="NumVar"/>
+<variable name="maxY" type="NumVar"/>
+<variable name="getKey" type="NumVar"/>
+<variable name="[A]" type="MatVar"/>
+<variable name="[B]" type="MatVar"/>
+<variable name="[C]" type="MatVar"/>
+<variable name="[D]" type="MatVar"/>
+<variable name="[E]" type="MatVar"/>
+<variable name="[F]" type="MatVar"/>
+<variable name="[G]" type="MatVar"/>
+<variable name="[H]" type="MatVar"/>
+<variable name="[I]" type="MatVar"/>
+<variable name="[J]" type="MatVar"/>
+<variable name="Str1" type="StrVar"/>
+<variable name="Str2" type="StrVar"/>
+<variable name="Str3" type="StrVar"/>
+<variable name="Str4" type="StrVar"/>
+<variable name="Str5" type="StrVar"/>
+<variable name="Str6" type="StrVar"/>
+<variable name="Str7" type="StrVar"/>
+<variable name="Str8" type="StrVar"/>
+<variable name="Str9" type="StrVar"/>
+<variable name="Str0" type="StrVar"/>
+<variable name="Pic1" type="PicVar"/>
+<variable name="Pic2" type="PicVar"/>
+<variable name="Pic3" type="PicVar"/>
+<variable name="Pic4" type="PicVar"/>
+<variable name="Pic5" type="PicVar"/>
+<variable name="Pic6" type="PicVar"/>
+<variable name="Pic7" type="PicVar"/>
+<variable name="Pic8" type="PicVar"/>
+<variable name="Pic9" type="PicVar"/>
+<variable name="Pic0" type="PicVar"/>
+</keywords>

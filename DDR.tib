@@ -1,0 +1,76 @@
+ClrHome
+5->THETA:0->Z
+Input "SPEED(1=FAST)",S
+Input "LEVEL(1-9)",L
+Input "LIVES? ",THETA
+ClrHome
+Disp "","","","","","","",""
+For(A,1,7)
+randInt(1,L)->.DDR(A)
+End
+Disp .DDR(1),.DDR(2),.DDR(3),.DDR(4),.DDR(5),.DDR(6),.DDR(7)
+Lbl BG
+For(A,0,S)
+Lbl FR
+Output(1,1,"             "
+Output(2,1,"             "
+Output(3,1,"             "
+Output(1,1,"TIME:")
+Output(2,1,"SCORE:")
+Output(3,1,"LIVES:")
+Output(1,6,S-A
+Output(2,7,Z)
+Output(3,7,THETA)
+getKey->B
+If B/=72 and B/=73 and B/=74 and B/=82 and B/=83 and B/=84 and B/=92 and B/=93 and B/=94 and A<S
+Then
+A+1->A
+Goto FR
+End
+If B=72
+7->C
+If B=73
+8->C
+If B=74
+9->C
+If B=82
+4->C
+If B=83
+5->C
+If B=84
+6->C
+If B=92
+1->C
+If B=93
+2->C
+If B=94
+3->C
+If C/=.DDR(1) and A>S
+Then
+A+1->A
+Goto FR
+End
+If C=.DDR(1)
+Then
+Lbl SE
+.DDR(2)->.DDR(1)
+.DDR(3)->.DDR(2)
+.DDR(4)->.DDR(3)
+.DDR(5)->.DDR(4)
+.DDR(6)->.DDR(5)
+.DDR(7)->.DDR(6)
+randInt(1,L)->.DDR(7)
+Goto 0
+End
+End
+If THETA=0
+Then
+Disp "YOU LOSE",Z:Stop
+Else
+THETA-1->THETA
+Goto SE
+End
+Lbl 0
+Disp .DDR(7)
+Z+1->Z
+Goto BG

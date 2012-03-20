@@ -1,0 +1,92 @@
+0->Xmin
+94->Xmax
+1->Xscl
+0->Ymin
+62->Ymax
+1->Yscl
+AxesOff
+ClrDraw
+RecallPic 1
+1->R
+{0,0,0,0,0,0,0,0,0,0}->.L1
+Lbl Y
+Pt-On(78,31,2)
+Pt-On(82,29,2)
+Pt-On(82,33,2)
+Pt-On(86,27,2)
+Pt-On(86,31,2)
+Pt-On(86,35,2)
+Pt-On(90,25,2)
+Pt-On(90,29,2)
+Pt-On(90,33,2)
+Pt-On(90,37,2)
+31->A
+5->X
+While X<93
+getKey->B
+Pt-Off(X,A,3
+If B=25
+A-1->A
+If B=34
+A+1->A
+If B=26
+X+1->X
+X+1->X
+Pt-On(X,A,3
+If X>=88 and X<=92 and A>=31 and A<=35
+Then
+Pt-Off(90,33,2
+.L1(R)+1->.L1(R)
+End
+If X>=76 and X<=80 and A>=29 and A<=33
+Then
+Pt-Off(78,31,2)
+.L1(R)+1->.L1(R)
+End
+If X>=80 and X<=84 and A>=31 and A<=35
+Then
+Pt-Off(82,33,2
+%%.L1(R)+1->.L1(R)
+End
+If X>=78 and X<=84 and A>=27 and A<=31
+Then
+Pt-Off(82,29,2
+%%.L1(R)+1->.L1(R)
+End
+If X>=84 and X<=88 and A<=29 and A>=25
+Then
+Pt-Off(86,25,2
+.L1(R)+1->.L1(R)
+End
+If X>=84 and X<=88 and A>=29 and A<=33
+Then
+Pt-Off(86,31,2
+.L1(R)+1->.L1(R)
+End
+If X>=84 and X<=88 and A>=23 and A<=37
+Then
+Pt-Off(86,35,2
+.L1(R)+1->.L1(R)
+End
+If X>=88 and X<=92 and A>=31 and A<=35
+Then
+Pt-Off(90,33,2
+.L1(R)+1->.L1(R)
+End
+If X>=88 and X<=92 and A>=35 and A<=39
+Then
+Pt-Off(90,37,2
+.L1(R)+1->.L1(R)
+End
+If X>=88 and X<=92 and A>=27 and A<=31
+Then
+Pt-Off(90,29,2
+.L1(R)+1->.L1(R)
+End
+If X>=88 and X<=92 and A>=23 and A<=27
+Then
+Pt-Off(90,25,2
+.L1(R)+1->.L1(R)
+End
+R+1->R
+Goto Y

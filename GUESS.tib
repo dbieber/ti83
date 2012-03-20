@@ -1,0 +1,28 @@
+Menu("GAME","ONE PLAYER",ON,"MULTI-PLAYER",TW
+Lbl TW
+Input "HIGH ",H
+Input "LOW ",L
+Input "HUMANS ",B
+Input "COMPUTERS ",C
+randInt(H,L)->A
+For(THETA,0,B)
+ClrHome
+Disp "",THETA+1
+Output(1,1,"HUMAN"
+End
+Stop
+Lbl ON
+Prompt L,H
+randInt(L,H)->A
+Lbl 0
+Input "GUESS ",B
+If B=A
+Then
+Disp "YAY"
+Stop
+End
+If B<A
+Disp "HIGHER"
+If B>A
+Disp "LOWER"
+Goto 0

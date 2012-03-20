@@ -1,0 +1,50 @@
+0->Xmin
+94->Xmax
+1->Xscl
+0->Ymin
+62->Ymax
+1->Yscl
+AxesOff
+0->W
+0->R
+Lbl 0
+ClrDraw
+randInt(15,54)->B
+randInt(33,86)->A
+Circle(A,B,2)
+Circle(A,B,4)
+Circle(A,B,6)
+Circle(A,B,8)
+Text(45,1,"START
+Text(52,1,"HERE->")
+Pt-On(25,7)
+Pause
+Input "SLOPE? ",S
+25->P
+7->Q
+If S>1
+Then
+1/S->S
+While P<94 and P>0 and Q>0 and Q<62 and sqrt((P-A)^2+(Q-B)^2)>sqrt((P+S-A)^2+(Q+1-B)^2)
+Pt-On(P,Q
+P+S->P
+Q+1->
+End
+Goto SC
+Else
+While P<94 and P>0 and Q>0 and sqrt((P-A)^2+(Q-B)^2)>sqrt((P+1-A)^2+(Q+S-B)^2)
+Pt-On(P,Q)
+P+1->P
+Q+S->Q
+End
+End
+Lbl SC
+10-sqrt((A-P)^2+(B-Q)^2)->H
+If H>0
+Then
+W+H^2->W
+End
+R+1->R
+If R<10
+Goto 0
+Disp round(W,0)
