@@ -1,5 +1,5 @@
 ClrHome
-Menu("      TYPE      ","INTEGERS,I,"PRIMES",P,"SQUARES",S
+Menu("      TYPE      ","INTEGERS",I,"PRIMES",P,"SQUARES",S
 Lbl I
 Input "NUMBER?",A
 1->B

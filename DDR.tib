@@ -6,9 +6,9 @@ Input "LIVES? ",THETA
 ClrHome
 Disp "","","","","","","",""
 For(A,1,7)
-randInt(1,L)->.DDR(A)
+randInt(1,L)->lDDR(A)
 End
-Disp .DDR(1),.DDR(2),.DDR(3),.DDR(4),.DDR(5),.DDR(6),.DDR(7)
+Disp lDDR(1),lDDR(2),lDDR(3),lDDR(4),lDDR(5),lDDR(6),lDDR(7)
 Lbl BG
 For(A,0,S)
 Lbl FR
@@ -22,7 +22,7 @@ Output(1,6,S-A
 Output(2,7,Z)
 Output(3,7,THETA)
 getKey->B
-If B/=72 and B/=73 and B/=74 and B/=82 and B/=83 and B/=84 and B/=92 and B/=93 and B/=94 and A<S
+If (B<72 or B>74) and (B<82 or B>84) and (B<92 or B>94) and A<S
 Then
 A+1->A
 Goto FR
@@ -45,21 +45,21 @@ If B=93
 2->C
 If B=94
 3->C
-If C/=.DDR(1) and A>S
+If C!=lDDR(1) and A>S
 Then
 A+1->A
 Goto FR
 End
-If C=.DDR(1)
+If C=lDDR(1)
 Then
 Lbl SE
-.DDR(2)->.DDR(1)
-.DDR(3)->.DDR(2)
-.DDR(4)->.DDR(3)
-.DDR(5)->.DDR(4)
-.DDR(6)->.DDR(5)
-.DDR(7)->.DDR(6)
-randInt(1,L)->.DDR(7)
+lDDR(2)->lDDR(1)
+lDDR(3)->lDDR(2)
+lDDR(4)->lDDR(3)
+lDDR(5)->lDDR(4)
+lDDR(6)->lDDR(5)
+lDDR(7)->lDDR(6)
+randInt(1,L)->lDDR(7)
 Goto 0
 End
 End
@@ -71,6 +71,6 @@ THETA-1->THETA
 Goto SE
 End
 Lbl 0
-Disp .DDR(7)
+Disp lDDR(7)
 Z+1->Z
 Goto BG
